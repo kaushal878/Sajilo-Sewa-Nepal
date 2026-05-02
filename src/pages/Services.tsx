@@ -1,0 +1,59 @@
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import type { Category, Service } from "@/types";
+import { CategoryFilter } from "@/components/CategoryFilter";
+import { SearchBar } from "@/components/SearchBar";
+import { ServiceCard } from "@/components/ServiceCard";
+import { buildIndex, searchServices } from "@/lib/search";
+
+interface Props {
+  services: Service[];
+}
+
+export function ServicesPage({ services }: Props) {
+  const [params, setParams] = useSearchParams();
+  const q = params.get("q") || "";
+  const cat = (params.get("cat") || "all") as Category | "all";
+  const [results, setResults] = useState<Service[]>(services);
+
+  const index = useMemo(() => buildIndex(services), [services]);
+
+  useEffect(() => {
+    let out = q.trim() ? searchServices(index, q, 100) : services;
+    if (cat !== "all") out = out.filter((s) => s.category === cat);
+    setResults(out);
+  }, [q, cat, services, index]);
+
+  return (
+    <div className="mx-auto w-full max-w-6xl px-4">
+      <h1 className="mb-3 text-2xl font-extrabold">सेवाहरू</h1>
+      <div className="mb-4">
+        <SearchBar services={services} initial={q} />
+      </div>
+      <div className="mb-5">
+        <CategoryFilter
+          active={cat}
+          onChange={(next) => {
+            const p = new URLSearchParams(params);
+            if (next === "all") p.delete("cat");
+            else p.set("cat", next);
+            setParams(p, { replace: true });
+          }}
+        />
+      </div>
+
+      {results.length === 0 ? (
+        <div className="card p-8 text-center text-zinc-500 dark:text-zinc-400">
+          कुनै सेवा भेटिएन। अर्को शब्द (उदाहरण: नागरिकता, राहदानी) प्रयोग
+          गर्नुहोस्।
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {results.map((s) => (
+            <ServiceCard key={s.id} service={s} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

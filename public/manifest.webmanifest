@@ -1,0 +1,14 @@
+{
+  "name": "सजिलो सेवा नेपाल",
+  "short_name": "सजिलो सेवा",
+  "description": "नेपाल सरकारका सेवा, मन्त्रालय, प्रक्रिया र फारम एकै ठाउँमा।",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#003893",
+  "lang": "ne",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any maskable" }
+  ]
+}

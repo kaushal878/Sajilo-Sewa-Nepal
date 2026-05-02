@@ -1,0 +1,138 @@
+import type { Ministry, Office } from "@/types";
+
+export const ministries: Ministry[] = [
+  {
+    id: "moha",
+    nameNe: "गृह मन्त्रालय",
+    nameEn: "Ministry of Home Affairs",
+    shortNe: "गृह",
+    website: "https://moha.gov.np",
+    description:
+      "नागरिकता, राहदानी, राष्ट्रिय परिचयपत्र, जिल्ला प्रशासन कार्यालय लगायतका सेवा हेर्ने मन्त्रालय।",
+  },
+  {
+    id: "molcpa",
+    nameNe: "भूमि व्यवस्था, सहकारी तथा गरिबी निवारण मन्त्रालय",
+    nameEn: "Ministry of Land Management, Cooperatives and Poverty Alleviation",
+    shortNe: "भूमि व्यवस्था",
+    website: "https://molcpa.gov.np",
+    description:
+      "जग्गा प्रशासन, जग्गा रजिस्ट्रेसन, नापी, मालपोत लगायतका सेवा सम्बन्धी मन्त्रालय।",
+  },
+  {
+    id: "mopit",
+    nameNe: "भौतिक पूर्वाधार तथा यातायात मन्त्रालय",
+    nameEn: "Ministry of Physical Infrastructure and Transport",
+    shortNe: "यातायात",
+    website: "https://mopit.gov.np",
+    description: "यातायात व्यवस्था विभाग र सडक यातायात सम्बन्धी सेवा।",
+  },
+  {
+    id: "moest",
+    nameNe: "शिक्षा, विज्ञान तथा प्रविधि मन्त्रालय",
+    nameEn: "Ministry of Education, Science and Technology",
+    shortNe: "शिक्षा",
+    website: "https://moest.gov.np",
+    description: "शिक्षा बोर्ड, विश्वविद्यालय अनुदान, छात्रवृत्ति लगायतका सेवा।",
+  },
+  {
+    id: "mof",
+    nameNe: "अर्थ मन्त्रालय",
+    nameEn: "Ministry of Finance",
+    shortNe: "अर्थ",
+    website: "https://mof.gov.np",
+    description: "आन्तरिक राजस्व विभाग (पान/भ्याट), भन्सार लगायतका सेवा।",
+  },
+  {
+    id: "mohp",
+    nameNe: "स्वास्थ्य तथा जनसंख्या मन्त्रालय",
+    nameEn: "Ministry of Health and Population",
+    shortNe: "स्वास्थ्य",
+    website: "https://mohp.gov.np",
+    description: "स्वास्थ्य बीमा, अस्पताल, रजिस्ट्रेसन सम्बन्धी सेवा।",
+  },
+  {
+    id: "moless",
+    nameNe: "श्रम, रोजगार तथा सामाजिक सुरक्षा मन्त्रालय",
+    nameEn: "Ministry of Labour, Employment and Social Security",
+    shortNe: "श्रम/वैदेशिक रोजगार",
+    website: "https://moless.gov.np",
+    description: "वैदेशिक रोजगार, श्रम स्वीकृति, सामाजिक सुरक्षा कोष।",
+  },
+];
+
+export const offices: Office[] = [
+  {
+    id: "dao",
+    nameNe: "जिल्ला प्रशासन कार्यालय",
+    nameEn: "District Administration Office",
+    ministryId: "moha",
+    addressNe: "सम्बन्धित जिल्ला सदरमुकाम",
+  },
+  {
+    id: "dpsd",
+    nameNe: "राहदानी विभाग, नारायणहिटी",
+    nameEn: "Department of Passports",
+    ministryId: "moha",
+    addressNe: "नारायणहिटी, काठमाडौं",
+    phone: "01-4416010",
+  },
+  {
+    id: "nidmc",
+    nameNe: "राष्ट्रिय परिचयपत्र तथा पञ्जीकरण विभाग",
+    nameEn: "Department of National ID and Civil Registration",
+    ministryId: "moha",
+    addressNe: "बबरमहल, काठमाडौं",
+  },
+  {
+    id: "dolma",
+    nameNe: "मालपोत कार्यालय",
+    nameEn: "Land Revenue Office",
+    ministryId: "molcpa",
+    addressNe: "सम्बन्धित जिल्ला/नगर",
+  },
+  {
+    id: "dosurv",
+    nameNe: "नापी कार्यालय",
+    nameEn: "Survey Office",
+    ministryId: "molcpa",
+  },
+  {
+    id: "dotm",
+    nameNe: "यातायात व्यवस्था कार्यालय",
+    nameEn: "Department of Transport Management Office",
+    ministryId: "mopit",
+    addressNe: "सम्बन्धित प्रदेश/क्षेत्र",
+  },
+  {
+    id: "ird",
+    nameNe: "आन्तरिक राजस्व कार्यालय",
+    nameEn: "Inland Revenue Office",
+    ministryId: "mof",
+    addressNe: "लाजिम्पाट, काठमाडौं (केन्द्रीय) र क्षेत्रीय कार्यालय",
+  },
+  {
+    id: "ward",
+    nameNe: "वडा कार्यालय",
+    nameEn: "Ward Office",
+    ministryId: "moha",
+    addressNe: "सम्बन्धित नगरपालिका/गाउँपालिकाको वडा",
+  },
+  {
+    id: "feb",
+    nameNe: "वैदेशिक रोजगार विभाग",
+    nameEn: "Department of Foreign Employment",
+    ministryId: "moless",
+    addressNe: "बुद्धनगर, काठमाडौं",
+  },
+  {
+    id: "neb",
+    nameNe: "राष्ट्रिय परीक्षा बोर्ड",
+    nameEn: "National Examination Board",
+    ministryId: "moest",
+    addressNe: "सानोठिमी, भक्तपुर",
+  },
+];
+
+export const ministryMap = new Map(ministries.map((m) => [m.id, m]));
+export const officeMap = new Map(offices.map((o) => [o.id, o]));
