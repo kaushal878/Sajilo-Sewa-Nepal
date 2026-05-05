@@ -23,9 +23,11 @@ export function Home({ services, isDemo }: Props) {
   return (
     <div className="mx-auto w-full max-w-6xl px-4">
       {/* Hero */}
-      <section className="relative overflow-hidden rounded-3xl border border-zinc-200 bg-grid p-6 sm:p-10 dark:border-zinc-800">
-        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-nepal-blue/15 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-nepal-red/15 blur-3xl" />
+      <section className="relative rounded-3xl border border-zinc-200 bg-grid p-6 sm:p-10 dark:border-zinc-800">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
+          <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-nepal-blue/15 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-nepal-red/15 blur-3xl" />
+        </div>
         <div className="relative z-10">
           <div className="mb-3 flex items-center gap-2">
             <span className="badge-red">नेपाल</span>
