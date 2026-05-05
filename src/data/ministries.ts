@@ -59,6 +59,22 @@ export const ministries: Ministry[] = [
     website: "https://moless.gov.np",
     description: "वैदेशिक रोजगार, श्रम स्वीकृति, सामाजिक सुरक्षा कोष।",
   },
+  {
+    id: "moics",
+    nameNe: "उद्योग, वाणिज्य तथा आपूर्ति मन्त्रालय",
+    nameEn: "Ministry of Industry, Commerce and Supplies",
+    shortNe: "उद्योग/वाणिज्य",
+    website: "https://moics.gov.np",
+    description: "कम्पनी दर्ता, उद्योग प्रशासन तथा व्यापार सम्बन्धी सेवा।",
+  },
+  {
+    id: "ec",
+    nameNe: "निर्वाचन आयोग",
+    nameEn: "Election Commission",
+    shortNe: "निर्वाचन आयोग",
+    website: "https://election.gov.np",
+    description: "मतदाता परिचयपत्र र निर्वाचन सम्बन्धी काम।",
+  },
 ];
 
 export const offices: Office[] = [
@@ -131,6 +147,34 @@ export const offices: Office[] = [
     nameEn: "National Examination Board",
     ministryId: "moest",
     addressNe: "सानोठिमी, भक्तपुर",
+  },
+  {
+    id: "ocr",
+    nameNe: "कम्पनी रजिष्ट्रारको कार्यालय",
+    nameEn: "Office of the Company Registrar",
+    ministryId: "moics",
+    addressNe: "त्रिपुरेश्वर, काठमाडौं",
+  },
+  {
+    id: "deo",
+    nameNe: "जिल्ला निर्वाचन कार्यालय",
+    nameEn: "District Election Office",
+    ministryId: "ec",
+    addressNe: "सम्बन्धित जिल्ला",
+  },
+  {
+    id: "bank",
+    nameNe: "बैंक तथा वित्तीय संस्था",
+    nameEn: "Banks and Financial Institutions",
+    ministryId: "mof",
+    addressNe: "सम्बन्धित बैंकको शाखा",
+  },
+  {
+    id: "mun",
+    nameNe: "नगरपालिका/गाउँपालिका",
+    nameEn: "Municipality/Rural Municipality",
+    ministryId: "moha",
+    addressNe: "सम्बन्धित स्थानीय तह",
   },
 ];
 
